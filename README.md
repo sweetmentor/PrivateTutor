@@ -1,4 +1,4 @@
-
+[![Build Status](https://travis-ci.org/sweetmentor/PrivateTutor.svg)](https://travis-ci.org/sweetmentor/PrivateTutor)
      ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
     '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
     |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
