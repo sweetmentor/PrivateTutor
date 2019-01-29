@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css">
+</head>
+<body>
+    <h2>Base HTML</h2>
+
+    <ul>
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'profile' %}">Profile</a></li>
+        <li><a href="{% url 'logout' %}">Log Out</a></li>
+        {% else %}
+        <li><a href="{% url 'register_buyer' %}">Create a student account</a></li>
+        <li><a href="{% url 'register_seller' %}">Create a tutor account</a></li>
+        <li><a href="{% url 'login' %}">Log In</a></li>
+        {% endif %}
+    </ul>
+    <div class="container">
+        {% block content %} {% endblock content %}
+    </div>
+</body>
+</html>
