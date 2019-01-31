@@ -3,7 +3,12 @@
 {% block content %}
 
 
-    <h1>"This is my subjects page"</h1>
-    
+    <h1>Subjects and Levels We Offer</h1>
+    <h4>Shop4Tutors helps you find private tutors in many subjects at all levels. Why not take a look at what we have to offer:</h4>
+        {% for subject in subjects %}
+    <ul>
+        <li><a>{{subject.name|truncatechars:40}}</a></li>
+    </ul>
+        {% endfor %}
     
 {% endblock %}
