@@ -18,6 +18,7 @@ from django.contrib import admin
 from home.views import get_index
 from home import urls as home_urls
 from accounts import urls as accounts_urls
+from subjects import urls as subjects_urls
 from django.views.static import serve
 from django.conf import settings
 
@@ -28,5 +29,6 @@ urlpatterns = [
     url(r'^$', get_index),
     url(r'^home/', include(home_urls)),
     url(r'^accounts/', include(accounts_urls)),
+    url(r'^subjects/', include(subjects_urls)),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ]

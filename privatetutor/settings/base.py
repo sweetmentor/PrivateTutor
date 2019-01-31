@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'storages',
     'home',
     'accounts',
+    'subjects',
 ]
 
 MIDDLEWARE = [
