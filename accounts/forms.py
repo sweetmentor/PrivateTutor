@@ -3,7 +3,7 @@ from django.forms import ModelForm
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
-from .models import Buyer, Seller
+from .models import Student, Tutor
 
 
 class UserLoginForm(forms.Form):
@@ -41,13 +41,13 @@ class UserRegistrationForm(UserCreationForm):
         return password2
         
 
-class BuyerRegistrationForm(forms.ModelForm): 
+class StudentRegistrationForm(forms.ModelForm): 
     class Meta: 
-        model=Buyer
+        model=Student
         fields= ['numbervalue', 'stringvalue']
         
-class SellerRegistrationForm(forms.ModelForm):
+class TutorRegistrationForm(forms.ModelForm):
     class Meta:
-        model=Seller
+        model=Tutor
         fields=['description', 'image', 'verified']
         

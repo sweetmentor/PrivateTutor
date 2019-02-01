@@ -22,6 +22,7 @@ from subjects import urls as subjects_urls
 from tutors import urls as tutors_urls
 from django.views.static import serve
 from django.conf import settings
+from django.conf.urls.static import static
 
 
 
@@ -32,5 +33,5 @@ urlpatterns = [
     url(r'^accounts/', include(accounts_urls)),
     url(r'^subjects/', include(subjects_urls)),
     url(r'^tutors/', include(tutors_urls)),
-    url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
+    url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT})
 ]

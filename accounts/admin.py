@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Buyer, Seller
+from .models import Student, Tutor
 
 # Register your models here.
-admin.site.register(Buyer)
-admin.site.register(Seller)
+admin.site.register(Student)
+admin.site.register(Tutor)

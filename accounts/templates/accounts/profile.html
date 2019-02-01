@@ -13,6 +13,11 @@
 <p>Email: {{ user.email }}</p>
 <p>Bio: {{ user.Profile.description }}</p>
 
+{% if user.Student %}
+<p>You are a Student!</p>
+{% else %}
+<p>You are a Tutor!</p>
+{% endif %}
 
 
 {% endblock content %}

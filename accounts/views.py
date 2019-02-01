@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import UserLoginForm, UserRegistrationForm, SellerRegistrationForm, BuyerRegistrationForm
+from .forms import UserLoginForm, UserRegistrationForm, TutorRegistrationForm, StudentRegistrationForm
 from django.contrib import auth
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
@@ -28,7 +28,7 @@ def login(request):
 def register_seller(request): 
     if request.method == "POST":
         user_form = UserRegistrationForm(request.POST)
-        seller_form = SellerRegistrationForm(request.POST, request.FILES)
+        seller_form = TutorRegistrationForm(request.POST, request.FILES)
         
         if user_form.is_valid() and seller_form.is_valid():
             user = user_form.save()
@@ -47,14 +47,14 @@ def register_seller(request):
                 user_form.add_error(None, "Can't log in now, try later.")
     else:
         user_form = UserRegistrationForm()
-        seller_form = SellerRegistrationForm()
+        seller_form = TutorRegistrationForm()
 
     return render(request, "accounts/register.html", {'user_form': user_form, 'user_type_form': seller_form})
     
 def register_buyer(request): 
     if request.method == "POST":
         user_form = UserRegistrationForm(request.POST)
-        buyer_form = BuyerRegistrationForm(request.POST, request.FILES)
+        buyer_form = StudentRegistrationForm(request.POST, request.FILES)
         
         if user_form.is_valid() and buyer_form.is_valid():
             user = user_form.save()
@@ -73,7 +73,7 @@ def register_buyer(request):
                 user_form.add_error(None, "Can't log in now, try later.")
     else:
         user_form = UserRegistrationForm()
-        buyer_form = BuyerRegistrationForm()
+        buyer_form = StudentRegistrationForm()
 
     return render(request, "accounts/register.html", {'user_form': user_form, 'user_type_form': buyer_form})
     

@@ -5,8 +5,8 @@ from django.core.urlresolvers import reverse_lazy
 
 urlpatterns = [
     url(r'^login$', login, name='login'),
-    url(r'^login/seller$', register_seller, name='register_seller'),
-    url(r'^login/buyer$', register_buyer, name='register_buyer'),
+    url(r'^login/tutor$', register_seller, name='register_seller'),
+    url(r'^login/student$', register_buyer, name='register_buyer'),
     url(r'^profile/$', profile, name='profile'),
     url(r'^logout/$', logout, name='logout'),
     url(r'^password-reset/$', password_reset,
