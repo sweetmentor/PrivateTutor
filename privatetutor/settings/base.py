@@ -25,7 +25,7 @@ SECRET_KEY = 'r_=2!^p_6@m9v^n^te-9uwvk%g96#dk1fe=7e-2@0puf5nzpjs'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['private-tutor-sweetmentor.c9users.io', 'https://private-tutor.herokuapp.com']
+ALLOWED_HOSTS = ['private-tutor-sweetmentor.c9users.io', 'private-tutor.herokuapp.com']
 
 
 # Application definition
